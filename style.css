@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1vw;
+    font-family: 'Overpass', sans-serif;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: #252d37;
+    --Very-Dark-Blue: #121417;
+}
+
+body {
+    background-color: hsl(228, 11%, 9%);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.container {
+    background-color: #212832;
+    border-radius: 25px;
+    padding: 30px 20px;
+    max-width: 400px;
+    color: var(--White);
+    font-weight: 700;
+}
+
+.star-img-container {
+    width: 50px;
+    height: 50px;
+    background-color: #262d37;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.description {
+    color: #6f7581;
+    line-height: 22px;
+    padding: 20px 0.5rem 20px 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-selector {
+    width: 50px;
+    height: 50px;
+    padding: 1rem;
+    background-color: #262f36;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--Light-Grey);
+    /* margin: 0 6px; */
+    font-size: 16px;
+    user-select: none;
+}
+
+.rating-selector:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+
+#submit-btn {
+    background-color: hsl(25, 97%, 53%);
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px 0;
+    border-radius: 25px;
+    box-shadow: 0 0 4rem var(--Very-Dark-Blue);
+    color: var(--White);
+    font-weight: 400;
+    letter-spacing: 3px;
+    cursor: pointer;
+
+}
+
+#submit-btn:hover {
+    background-color: var(--White);
+    color: hsl(25, 97%, 53%);
+}
+
+.selected-rating {
+    background-color: hsl(214, 12%, 54%);
+    color: #f7fcfc;
+}
+
+.no-highlight {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ####################### thank state ################# */
+.thankyou-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.selected-rating-info h1 {
+    font-size: 16px;
+    background-color: #27303b;
+    color: #fa7611;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.thank-you {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.thankyou-message {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--Light-Grey);
+    text-align: center;
+}
+
+@media screen and (max-width:400px) {
+    .container {
+        width: 86%;
+        border-radius: 20px;
+    }
+
+    .rating-selector {
+        width: 40px;
+        height: 40px;
+    }
+
+    .rating-selector:hover {
+        background-color: #262f36;
+        color: var(--Light-Grey);
+    }
+
+    .description {
+        font-weight: 400;
+    }
+
+    #submit-btn:hover {
+        background-color: hsl(25, 97%, 53%);
+        color: white;
+    }
+
+    /* thankyou state */
+
+    .thank-you {
+        font-size: 28px;
+    }
+
+    .thankyou-message {
+        font-size: 14px;
+    }
+}
